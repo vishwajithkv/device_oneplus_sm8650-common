@@ -13,8 +13,16 @@ subsystem adf
 /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pmxr2230@1:qcom,flash_led@ee00/leds/led:torch_3 brightness 0660 cameraserver camera
 /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pmxr2230@1:qcom,flash_led@ee00/leds/led:switch_0 brightness 0660 cameraserver camera
 
-# Charger
+# Charger & Battery Health
 /sys/class/oplus_chg/*  mmi_charging_enable    0660    system  system
+/sys/class/oplus_chg/*  battery_ui_soh         0664    system  system
+/sys/class/oplus_chg/*  battery_ui_cc          0664    system  system
+/sys/class/oplus_chg/*  battery_cc             0664    system  system
+/sys/class/oplus_chg/*  battery_first_usage_date 0664  system  system
+/sys/class/oplus_chg/*  battery_manu_date      0664    system  system
+/sys/class/oplus_chg/*  design_capacity        0664    system  system
+/sys/class/oplus_chg/*  battery_fcc            0664    system  system
+/sys/class/oplus_chg/*  battery_rm             0664    system  system
 
 # Display
 firmware_directories /mnt/vendor/persist/display/
