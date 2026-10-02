@@ -1,5 +1,6 @@
 service vendor.health-default /vendor/bin/hw/android.hardware.health-service.oplus
     class hal
+    interface aidl android.hardware.health.IHealth/default
     user system
     group system
     capabilities WAKE_ALARM BLOCK_SUSPEND
